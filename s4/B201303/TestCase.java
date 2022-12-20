@@ -76,6 +76,10 @@ public class TestCase {
 	    assert freq == 4: "Hi Ho Hi Ho, H: " + freq;
 	    freq = myObject.subByteFrequency(0, 0);
 	    assert freq == 0: "Hi Ho Hi Ho, : " + freq;
+	    freq = myObject.subByteFrequency(0, 2);
+	    assert freq == 2: "Hi Ho Hi Ho, Hi: " + freq;
+	    freq = myObject.subByteFrequency(1, 2);
+	    assert freq == 2: "Hi Ho Hi Ho, i: " + freq;
 	    freq = myObject.subByteFrequency(0, 3);
 	    assert freq == -1: "Undefined";
 	    freq = myObject.subByteFrequency(3, 3);
