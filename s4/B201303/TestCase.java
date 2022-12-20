@@ -71,8 +71,8 @@ public class TestCase {
 
 	    myObject = new Frequencer();
 	    myObject.setSpace("Hi Ho Hi Ho".getBytes());
-	    myObject.setTarget("Hi ".getBytes());
-	    freq = myObject.subByteFrequency(0, 2);
+	    myObject.setTarget("Hi".getBytes());
+	    freq = myObject.subByteFrequency(0, 1);
 	    assert freq == 4: "Hi Ho Hi Ho, H: " + freq;
 
 
