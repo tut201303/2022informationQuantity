@@ -67,9 +67,28 @@ public class Frequencer implements FrequencerInterface {
 
     // I know that here is a potential problem in the declaration.
     @Override
-    public int subByteFrequency(int start, int length) {
-        // Not yet implemented, but it should be defined as specified.
-        return -1;
+    public int subByteFrequency(int start, int end) {
+	int targetLength = myTarget.length;
+	int spaceLength = mySpace.length;
+	int count = 0;
+	int sublength = end - 1 - start;
+        if(start > targetLength || (end-1) > targetLength || sublength < -1){
+            return -1;
+	}else if(sublength == -1){
+	    return 0;
+	}else{
+	    boolean abort = false;
+	    for(int j = 0; j<spaceLength; j++){
+	        if((j + sublength) > spaceLength){
+		    break;
+		}
+		for(int i = start; i<end; i++){
+		    if(myTarget[i] != mySpace[j+i-start]) { abort = true; break; }
+		}
+		if(abort == false) { count++; }
+	    }
+	}
+	return count;
     }
 
     public static void main(String[] args) {
