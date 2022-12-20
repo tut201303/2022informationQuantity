@@ -51,11 +51,12 @@ public class Frequencer implements FrequencerInterface {
                     if(myTarget[i] != mySpace[start+i]) { abort = true; break; }
                 }
                 if(abort == false) { count++; }
+	    
             }
 	}else{
 	    boolean abort = false;
 	    for(int i = 0; i<targetLength; i++){
-	        if(myTarget[i] != mySpace[i]) { abort = true; break; }
+	        if(myTarget[i] != mySpace[i]) { abort = true; break;}
 	    }
 	    if(abort == false) { count++; }
 	}
