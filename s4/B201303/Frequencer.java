@@ -44,7 +44,11 @@ public class Frequencer implements FrequencerInterface {
         int spaceLength = mySpace.length;
         int count = 0;
 	if(debugMode) { showVariables(); }
-	if(targetLength < spaceLength){
+	if(targetLength == 0){
+	    count = -1;
+	}else if(spaceLength == 0){
+	    count = 0;
+	}else if(targetLength < spaceLength){
             for(int start = 0; start<spaceLength; start++) { // Is it OK?
                 boolean abort = false;
                 for(int i = 0; i<targetLength; i++) {
