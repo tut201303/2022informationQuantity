@@ -72,7 +72,7 @@ public class Frequencer implements FrequencerInterface {
 	int spaceLength = mySpace.length;
 	int sub_count = 0;
 	int sublength = end - 1 - start;
-        if(start > targetLength || (end-1) > targetLength || sublength < -1){
+        if(start > targetLength || end > targetLength || sublength < -1){
             return -1;
 	}else if(sublength == -1){
 	    return 0;
